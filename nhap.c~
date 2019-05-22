@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include"btree.h"
+BTA * data = NULL;
+int main(){
+  data = btopn("AnhViet.dat", 0, 1);
+  BTint value, existed = 0;
+  char word[30]="hello";
+  int i=bfndky(data, word, &value);
+  printf("i=%d\n",i);
+  return 0;
+}

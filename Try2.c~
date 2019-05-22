@@ -1,0 +1,10 @@
+  comple = gtk_entry_completion_new();
+  gtk_entry_completion_set_text_column(comple, 0);
+  list = gtk_list_store_new(10, G_TYPE_STRING, G_TYPE_STRING,
+			    G_TYPE_STRING, G_TYPE_STRING,
+			    G_TYPE_STRING, G_TYPE_STRING,
+			    G_TYPE_STRING, G_TYPE_STRING,
+			    G_TYPE_STRING, G_TYPE_STRING);
+
+  gtk_entry_completion_set_model(comple, GTK_TREE_MODEL(list));
+  gtk_entry_set_completion(GTK_ENTRY(textSearch), comple);
